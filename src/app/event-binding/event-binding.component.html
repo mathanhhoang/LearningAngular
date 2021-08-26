@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+<button type="button" (click)="onClickMe($event)">Click Me !!!</button>
+<h2>{{ count }}</h2>
+<button type="button" (click)="count = count +1">Tang</button>
+
+<div class="form-group">
+    <input type="text" class="form-control" (keyup)="onKeyUp($event)">
+</div>
+
+<h3>{{display}}</h3>

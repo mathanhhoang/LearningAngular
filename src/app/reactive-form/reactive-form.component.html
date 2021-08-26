@@ -1,0 +1,36 @@
+<h1>Reactive Form</h1>
+<div>
+  <form [formGroup]="frmUser" autocomplete="true" novalidate="false" (ngSubmit)="onSubmitForm()">
+    <div>
+      <label>Username: </label>
+      <input type="text" class="form-control" name="txtUsername" 
+      formControlName="username"/>
+      <span *ngIf="frmUser.controls.username.touched && frmUser.controls.username.errors?.required">
+        Vui long nhap username
+      </span>
+    </div>
+    <div>
+      <label>Num</label>
+      <input type="number" min="1" max="50" class="form-control">
+    </div>
+    <div>
+      <label>Password: </label>
+      <input type="password" class="form-control" name="txtPassword" formControlName="password"/>
+    </div>
+    <div>
+      <label>Fullname: </label>
+      <input type="text" class="form-control" name="txtFullname" formControlName="fullname"/>
+    </div>
+    <div>
+      <label>Email: </label>
+      <input type="email" class="form-control" name="txtEmail" formControlName="email"/>
+    </div>
+    <div>
+      <label>Phone: </label>
+      <input type="text" class="form-control" name="txtPhone" formControlName="phone"/>
+    </div>
+
+    <button type="submit">Save</button>
+    <button (click)="onResetForm()" type="button">Reset</button>
+  </form>
+</div>

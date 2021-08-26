@@ -1,0 +1,25 @@
+<h1>{{ name }}</h1>
+<hr>
+<img [src]="imgLink">
+<hr>
+<button type="button" [disabled]="isValid">Dang nhap</button>
+<hr>
+<b>{{pipes | uppercase}}</b><br/> 
+<b>{{pipes | lowercase}}</b>
+<hr>
+<table border="1" [attr.width]="tbWidth">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>SDT</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>ABC</td>
+        <td>123456</td>
+    </tr>
+</table>
+<hr>
+<span [class.label]="isChecked">Check class binding</span>
+<hr>
+<div [style.background-color]="isStyle ? 'red' : 'blue'">Style binding</div>
